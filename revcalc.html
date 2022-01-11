@@ -12,33 +12,37 @@
   </head>
   <body>
 
-    <div class="container py-5">
+    <div class="container p-5">
 
-    <h4 class="font-weight-bolder"> Hello, Nerds! </h4>
+    <div class="row">
+      <div class="col">
+        <H4 class="">Hello, Nerds!</h4>
+        <p>Calculate annual sales needed to reach your annual earnings goal.</p>
+        <p>Fees: 20% default for now.</p>
+        <hr class="mt-4 mb-4">
+        <div class="calculator pb-5">
+          <div class="mb-3">
+            <label for="myGoal" class="form-label">Annual Salary Goal (pre-tax)</label>
+            <input type="" inputMode="numeric" class="col-3 form-control" id="myGoal" value="" placeholder="$">
+          </div>
+          <div class="mb-3">
+            <label for="myCogs" class="form-label">COGs (Est Monthly)</label>
+            <input type="" inputMode="numeric" class="form-control" id="myCogs" value="" placeholder="$">
+          </div>
+          <div class="mb-4">
+            <label for="myExp" class="form-label">Expenses (Est Monthly)</label>
+            <input type="" inputMode="numeric" class="form-control" id="myExp" value="" placeholder="$">
+            <div id="expenseHelp" class="form-text">Gas, Storage Unit, Shipping Supplies, etc. </div>
+          </div>
 
-      <div class="calculator py-5">
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Goal (pre-tax)</label>
-          <input type="text" class="form-control" id="myGoal" value="">
+          <button type="button" class="btn btn-primary mb-5" onclick="calculateTotal()">Calculate</button>
+
+          <div class="neededRev">
+            <p id="annualRev" class=""></p>
+
+          </div>
+
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">COGs (Monthly)</label>
-          <input type="text" class="form-control" id="myCogs" value="">
-        </div>
-        <div class="mb-4">
-          <label for="exampleFormControlInput1" class="form-label">Expenses (Monthly)</label>
-          <input type="text" class="form-control" id="myExp" value="">
-          <div id="expenseHelp" class="form-text">Gas, Storage Unit, Shipping Supplies</div>
-        </div>
-
-        <!--Fees                      <input type="text" id="estFees" value="">-->
-
-        <button type="button" class="btn btn-primary mb-5" onclick="calculateTotal()">Calculate</button>
-
-        <div class="neededRev">
-          <p id="annualRev" class=""></p>
-        </div>
-      </div>
 
       <!-- <div class="breakdown p-5">
           <div class="mb-3">
@@ -50,7 +54,8 @@
           <input type="text" class="form-control" id="myStr" value="">
         </div>
       </div>-->
-
+      </div>
+    </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
