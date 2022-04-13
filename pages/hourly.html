@@ -51,7 +51,7 @@
       <ul class="navbar-nav">
         <!-- DASHBOARD -->
         <li class="nav-item">
-          <a class="nav-link active" href="../pages/index.html">
+          <a class="nav-link" href="../pages/index.html">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>shop </title>
@@ -99,7 +99,7 @@
         </li>
         <!-- CALCULATORS -->
         <li class="nav-item">
-          <a class="nav-link" href="../pages/calculators.html">
+          <a class="nav-link active" href="../pages/calculators.html">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>credit-card</title>
@@ -239,6 +239,7 @@
       </ul>
     </div>
   </aside>
+
   <main class="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg ">
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
@@ -246,9 +247,9 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Calculators</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+          <h6 class="font-weight-bolder mb-0">Hourly Rate Calculator</h6>
         </nav>
 
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
@@ -362,138 +363,79 @@
     <div class="container-fluid py-4">
 
       <div class="row">
-        <div class="col-12 col-xl-4  mb-xl-0 mb-4">
+        <div class="col-12">
+
           <div class="card">
-            <div class="card-header pb-0 p-3">
-              <h6 class="mb-0">About</h6>
+
+          <div class="card-header pb-0 p-3">
+            <h1 class="" style="font-size: 18px">Calculate Estimated Hourly Rate</h1>
+            <p>Estimate all time in minutes. Leave any fields you're unsure of blank.</p>
+          </div>
+
+          <div class="card-body">
+            <!-- sourceTime -->
+            <div class="row mb-3">
+              <label for="sourceTime" class="col col-form-label">Source Time</label>
+              <input type="" inputMode="numeric" class="col col-form" id="sourceTime" value="" placeholder="mins">
             </div>
-            <div class="card-body p-3">
-              <p class="text-sm">I’m Danielle, a full time reseller and this is my safe space to be a nerd.</p>
-              <a href="../pages/about.html" class="text-sm">More <i class="fa fa-arrow-right text-sm ms-1" aria-hidden="true"></i></a>
+            <!-- prepTime -->
+            <div class="row mb-3">
+              <label for="prepTime" class="col col-form-label">Prep Time</label>
+              <input type="" inputMode="numeric" class="col col-form" id="prepTime" value="" placeholder="mins">
             </div>
+            <!-- photoTime -->
+            <div class="row mb-3">
+              <label for="photoTime" class="col col-form-label">Photo Time</label>
+              <input type="" inputMode="numeric" class="col col-form" id="photoTime" value="" placeholder="mins">
+            </div>
+            <!-- adminTime -->
+            <div class="row mb-3">
+              <label for="adminTime" class="col col-form-label">Admin Time</label>
+              <input type="" inputMode="numeric" class="col col-form" id="adminTime" value="" placeholder="mins">
+            </div>
+            <!-- listTime -->
+            <div class="row mb-3">
+              <label for="listTime" class="col col-form-label">List Time</label>
+              <input type="" inputMode="numeric" class="col col-form" id="listTime" value="" placeholder="mins">
+            </div>
+            <!-- shipTime -->
+            <div class="row mb-3">
+              <label for="shipTime" class="col col-form-label">Ship Time</label>
+              <input type="" inputMode="numeric" class="col col-form" id="shipTime" value="" placeholder="mins">
+            </div>
+            <!-- costGoods -->
+            <div class="row mb-3">
+              <label for="costGoods" class="col col-form-label">Total COGs</label>
+              <input type="" inputMode="numeric" class="col col-form" id="costGoods" value="" placeholder="$">
+            </div>
+            <!-- valueListed -->
+            <div class="row mb-3">
+              <label for="valueListed" class="col col-form-label">Total Value Listed</label>
+              <input type="" inputMode="numeric" class="col col-form" id="valueListed" value="" placeholder="$">
+            </div>
+            <!-- avgFee -->
+            <div class="row mb-3">
+              <label for="avgFee" class="col col-form-label">Average Fees</label>
+              <input type="" inputMode="numeric" class="col col-form" id="avgFee" value="" placeholder="%">
+            </div>
+
+
+
+          <button type="button" class="btn btn-primary mb-5" onclick="calculateTotal()">Calculate</button>
+
+          <div class="row">
+            <p id="totalTime"></p>
+            <p id="totalProfit"></p>
+            <p id="totalHours"></p>
+            <p id="sellAll"></p>
+            <p id="sellThree"></p>
+            <p id="sellHalf"></p>
+            <p id="sellQuarter"></p>
           </div>
         </div>
-
-        <div class="col-12 col-lg-6 mb-xl-0 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <p>h3ll0</p>
-            </div>
-          </div>
-        </div>
-
       </div>
-
-<!-- 4 CARDS -->
-      <!-- <div class="row mt-4">
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-          <div class="card">
-            <div class="card-body p-3">
-              <div class="row">
-                <div class="col-8">
-                  <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Money</p>
-                    <h5 class="font-weight-bolder mb-0">
-                      $53,000
-                      <span class="text-success text-sm font-weight-bolder">+55%</span>
-                    </h5>
-                  </div>
-                </div>
-                <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-          <div class="card">
-            <div class="card-body p-3">
-              <div class="row">
-                <div class="col-8">
-                  <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Money</p>
-                    <h5 class="font-weight-bolder mb-0">
-                      $53,000
-                      <span class="text-success text-sm font-weight-bolder">+55%</span>
-                    </h5>
-                  </div>
-                </div>
-                <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-          <div class="card">
-            <div class="card-body p-3">
-              <div class="row">
-                <div class="col-8">
-                  <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Money</p>
-                    <h5 class="font-weight-bolder mb-0">
-                      $53,000
-                      <span class="text-success text-sm font-weight-bolder">+55%</span>
-                    </h5>
-                  </div>
-                </div>
-                <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-          <div class="card">
-            <div class="card-body p-3">
-              <div class="row">
-                <div class="col-8">
-                  <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Money</p>
-                    <h5 class="font-weight-bolder mb-0">
-                      $53,000
-                      <span class="text-success text-sm font-weight-bolder">+55%</span>
-                    </h5>
-                  </div>
-                </div>
-                <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-<!-- WEEKLY CHART -->
-      <div class="row mt-4">
-        <div class="col-xl-6">
-          <div class="card">
-            <div class="card-body">
-              <canvas id="weeklySales" class="chart-canvas" height="200"></canvas>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="row mt-4">
-
-      </div>
-      <div class="row my-4">
-
-      </div>
+    </div>
+  </div>
 
       <!-- Footer -->
       <footer class="footer pt-3  ">
@@ -534,87 +476,47 @@
 
   </main>
 
-
-  <!--   Core JS Files   -->
-  <script src="../assets/js/data.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
   <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
   <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
 
   <script>
-    const ctx = document.getElementById("weeklySales").getContext("2d");
+    function calculateTotal() {
+      var getSourceTime = document.getElementById("sourceTime").value;
+      var getPrepTime = document.getElementById("prepTime").value;
+      var getPhotoTime = document.getElementById("photoTime").value;
+      var getAdminTime = document.getElementById("adminTime").value;
+      var getListTime = document.getElementById("listTime").value;
+      var getShipTime = document.getElementById("shipTime").value;
+      var getCostGoods = document.getElementById("costGoods").value;
+      var getValueListed = document.getElementById("valueListed").value;
+      var getAvgFee = document.getElementById("avgFee").value;
+      var hour = 60;
 
-    const weeklySales = new Chart(ctx, {
-      type: "bar",
-      data: {
-        labels: weekNumber,
-        datasets: [
-          {
-            label: "eBay",
-            data: ebayWeeklySales,
-            backgroundColor: ebayColor,
-            order: 2
-          },
-          {
-            label: "Posh",
-            data: poshWeeklySales,
-            backgroundColor: poshColor,
-            order: 2
-          },
-          {
-            label: "Mercari",
-            data: mercariWeeklySales,
-            backgroundColor: mercariColor,
-            order: 2
-          },
-          {
-            label: "FBMP",
-            data: fbmpWeeklySales,
-            backgroundColor: fbmpColor,
-            order: 2
-          },
-          {
-            label: "Total $",
-            type: "line",
-            yAxisID: "B",
-            data: revenueWeeklySales,
-            borderColor: "rgb(150, 150, 150)",
-            order: 1
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        scales: {
-          x: {
-            stacked: true
-          },
-          y: {
-            stacked: true,
-            display: false
-          }
-        }
-      }
-    });
+      var totalTime = parseInt(getSourceTime) + parseInt(getPrepTime) + parseInt(getPhotoTime) + parseInt(getAdminTime) + parseInt(getListTime) + parseInt(getShipTime);
+      var totalHours = (totalTime / hour).toFixed(1);
+      var grossProfit = ((parseInt(getValueListed) * ((100 - getAvgFee) / 100)) - getCostGoods).toFixed(2);
 
+      var sellAll = (((grossProfit * 1) / totalTime) * hour).toFixed(2);
+      var sellThree = (((grossProfit * 0.75) / totalTime) * hour).toFixed(2);
+      var sellHalf = (((grossProfit * 0.5) / totalTime) * hour).toFixed(2);
+      var sellQuarter = (((grossProfit * 0.25) / totalTime) * hour).toFixed(2);
 
+      document.getElementById("totalProfit").innerHTML = "Total Potential Gross Profit $" + grossProfit;
+      document.getElementById("totalHours").innerHTML = "Total " + totalHours + " hours.";
+      document.getElementById("sellAll").innerHTML = "If all sell, you'll make $" + sellAll + "/hr.";
+      document.getElementById("sellThree").innerHTML = "If 75% sell, you'll make $" + sellThree + "/hr.";
+      document.getElementById("sellHalf").innerHTML = "If 50% sell, you'll make $" + sellHalf + "/hr.";
+      document.getElementById("sellQuarter").innerHTML = "If 25% sell, you'll make $" + sellQuarter + "/hr.";
+
+    };
   </script>
 
-  <script>
-    var win = navigator.platform.indexOf('Win') > -1;
-    if (win && document.querySelector('#sidenav-scrollbar')) {
-      var options = {
-        damping: '0.5'
-      }
-      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-    }
-  </script>
-  <!-- Github buttons -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
 </body>
 
 </html>

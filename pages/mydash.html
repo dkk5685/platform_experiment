@@ -246,9 +246,9 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">My Dashboard</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+          <h6 class="font-weight-bolder mb-0">My Dashboard</h6>
         </nav>
 
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
@@ -362,29 +362,54 @@
     <div class="container-fluid py-4">
 
       <div class="row">
-        <div class="col-12 col-xl-4  mb-xl-0 mb-4">
+        <div class="col-12 col-xl-5 mb-xl-0 mb-4">
           <div class="card">
-            <div class="card-header pb-0 p-3">
-              <h6 class="mb-0">About</h6>
-            </div>
-            <div class="card-body p-3">
-              <p class="text-sm">I’m Danielle, a full time reseller and this is my safe space to be a nerd.</p>
-              <a href="../pages/about.html" class="text-sm">More <i class="fa fa-arrow-right text-sm ms-1" aria-hidden="true"></i></a>
+            <!-- <div class="card-header pb-0 p-3">
+              <h6 class="mb-0"></h6>
+            </div> -->
+            <div class="card-body" style="margin-left: 5px">
+              <div class="row">
+                <div class="col-sm-6 col-lg-3 p-1">
+                  <div class="row">
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Revenue</p>
+                    <h5 id="revenueToDate" class="font-weight-bolder mb-0">
+                    </h5>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 p-1">
+                  <div class="row">
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Profit</p>
+                    <h5 id="profitToDate" class="font-weight-bolder mb-0">
+                    </h5>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 p-1">
+                  <div class="row">
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Monthly Rev</p>
+                    <h5 id="revenueMonth" class="font-weight-bolder mb-0">
+                    </h5>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 p-1">
+                  <div class="row">
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Monthly Profit</p>
+                    <h5 id="profitMonth" class="font-weight-bolder mb-0"></h5>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-12 col-lg-6 mb-xl-0 mb-4">
+        <div class="col-12 col-lg-7 mb-xl-0 mb-4">
           <div class="card">
             <div class="card-body">
-              <p>h3ll0</p>
+
             </div>
           </div>
         </div>
-
       </div>
 
-<!-- 4 CARDS -->
       <!-- <div class="row mt-4">
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
           <div class="card">
@@ -392,10 +417,8 @@
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Money</p>
-                    <h5 class="font-weight-bolder mb-0">
-                      $53,000
-                      <span class="text-success text-sm font-weight-bolder">+55%</span>
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Revenue</p>
+                    <h5 id="revenueToDate" class="font-weight-bolder mb-0">
                     </h5>
                   </div>
                 </div>
@@ -414,10 +437,8 @@
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Money</p>
-                    <h5 class="font-weight-bolder mb-0">
-                      $53,000
-                      <span class="text-success text-sm font-weight-bolder">+55%</span>
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Profit</p>
+                    <h5 id="profitToDate" class="font-weight-bolder mb-0">
                     </h5>
                   </div>
                 </div>
@@ -436,10 +457,8 @@
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Money</p>
-                    <h5 class="font-weight-bolder mb-0">
-                      $53,000
-                      <span class="text-success text-sm font-weight-bolder">+55%</span>
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Monthly Revenue</p>
+                    <h5 id="revenueMonth" class="font-weight-bolder mb-0">
                     </h5>
                   </div>
                 </div>
@@ -458,11 +477,8 @@
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Money</p>
-                    <h5 class="font-weight-bolder mb-0">
-                      $53,000
-                      <span class="text-success text-sm font-weight-bolder">+55%</span>
-                    </h5>
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Monthly Profit</p>
+                    <h5 id="profitMonth" class="font-weight-bolder mb-0"></h5>
                   </div>
                 </div>
                 <div class="col-4 text-end">
@@ -476,7 +492,6 @@
         </div>
       </div> -->
 
-<!-- WEEKLY CHART -->
       <div class="row mt-4">
         <div class="col-xl-6">
           <div class="card">
@@ -485,7 +500,6 @@
             </div>
           </div>
         </div>
-
       </div>
 
       <div class="row mt-4">
@@ -544,14 +558,19 @@
   <script src="../assets/js/plugins/chartjs.min.js"></script>
 
   <script>
+
+    document.getElementById("revenueToDate").innerHTML = "$" + totalRevenueAnnual;
+    document.getElementById("profitToDate").innerHTML = "$" + totalProfitAnnual;
+    document.getElementById("revenueMonth").innerHTML = "$" + totalRevenueMonth;
+    document.getElementById("profitMonth").innerHTML = "$" + totalProfitMonth;
+
     const ctx = document.getElementById("weeklySales").getContext("2d");
 
     const weeklySales = new Chart(ctx, {
       type: "bar",
       data: {
         labels: weekNumber,
-        datasets: [
-          {
+        datasets: [{
             label: "eBay",
             data: ebayWeeklySales,
             backgroundColor: ebayColor,
@@ -598,8 +617,6 @@
         }
       }
     });
-
-
   </script>
 
   <script>
@@ -611,10 +628,6 @@
       Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
     }
   </script>
-  <!-- Github buttons -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
 </body>
 
 </html>
